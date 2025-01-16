@@ -1,5 +1,25 @@
 {
   "dependencies": {
-    "lts": "^2.0.0"
-  }
+    "express": "^4.21.2",
+    "lts": "^2.0.0",
+    "nodemon": "^3.1.9"
+  },
+  "name": "crcp6340_project",
+  "description": "Web3 Project for CRCP 6340",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/P1nkPegasus/CRCP6340_Project.git"
+  },
+  "author": "Rukiya D.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/P1nkPegasus/CRCP6340_Project/issues"
+  },
+  "homepage": "https://github.com/P1nkPegasus/CRCP6340_Project#readme"
 }
