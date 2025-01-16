@@ -1,11 +1,13 @@
+body {
+  font-family: "Shadows Into Light", serif;
+}
+
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-div {
-    border: 1px solid red;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
