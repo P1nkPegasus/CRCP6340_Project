@@ -22,8 +22,11 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <nav id="navBar" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <a class="navbar-brand" href="#">Rukiya D.</a>
+  <nav
+    id="navBar"
+    class="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+  >
+    <a class="navbar-brand ms-4" href="#">Rukiya D.</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -42,8 +45,7 @@
         </li>
         <li class="nav-item">
           <!-- <a class="nav-link" href="../about.html">About</a> -->
-          <a class="nav-link" href=#aboutSection>About</a>
-
+          <a class="nav-link" href="#aboutSection">About</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -74,22 +76,197 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <!-- adjusts grid layout -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
     <script type="module" src="./js/index.js"></script>
+<!-- TODO update text -->
+    <!-- thematic breaks -->
+    <hr class="my-3" />
+    <div id="projectCards" class="row" data-masonry='{"percentPosition": true }'>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img src="images/sketch_24087d_6.png" 
+            class="bd-placeholder-img card-img-top"
+            width="100%"
+            height="200"
+            role="img"
+            aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#868e96" />
+          </img>
 
-
-  <div id="aboutSection" class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="images/sketch_24087d_7.png" class="d-block mx-lg-auto img-fluid" alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb" width="700" height="200" loading="lazy">
-        <img src="images/sketch_24087d_7.png" class="d-block mx-lg-auto img-fluid" alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb" width="700" height="200" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">About Rukiya</h1>
-        <p class="lead">
-            Once upon a time, in the magical world of creation, there existed a legendary creature known as Pink Pegasus! This mythical being didn’t just gallop through the realms of full-stack software development—they soared across the vast landscapes of art and technology. A true multidisciplinary artist, they conjured wonders with code, 3D modeling, physical hardware, photography, digital art forms, VR/AR, and anything else they could get their hands on. With a sprinkle of fun and a dash of spirit, they left a trail of innovation and joy in every medium they touched. Their dazzling creations seamlessly fused web applications, APIs, third-party integrations, and databases with artistic expression. This extraordinary creature wasn’t just talented—they were organized, collaborative, and infused every project with harmony and laughter. Their magical charisma enchanted media outlets and industry leaders alike, sharing tales of their artistic and software engineering adventures through captivating presentations and delightful conversations. So, embrace your inner pegasus and let the magic of creation—across every form—begin!</p>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card p-3">
+          <figure class="p-3 mb-0">
+            <blockquote class="blockquote">
+              <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0 text-muted">
+              Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+            <img src="images/sketch_24087d_5.png" 
+            class="bd-placeholder-img card-img-top"
+            width="100%"
+            height="200"
+            role="img"
+            aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#868e96" />
+          </svg>
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to
+              additional content.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card text-bg-primary text-center p-3">
+          <figure class="mb-0">
+            <blockquote class="blockquote">
+              <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0 text-white">
+              Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This card has a regular title and short paragraph of text below
+              it.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+            <img src="images/sketch_24087d_4.png" 
+            class="bd-placeholder-img card-img-top"
+            width="100%"
+            height="200"
+            role="img"
+            aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#868e96" />
+            <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
+          </svg>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card p-3 text-end">
+          <figure class="mb-0">
+            <blockquote class="blockquote">
+              <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0 text-muted">
+              Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is another card with title and supporting text below. This
+              card has some additional content to make it slightly taller
+              overall.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+
+    <!-- thematic breaks -->
+    <hr class="my-3" />
+    <div id="aboutSection" class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="images/sketch_24087d_7.png"
+            class="d-block mx-lg-auto img-fluid"
+            alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb"
+            width="700"
+            height="200"
+            loading="lazy"
+          />
+          <img
+            src="images/sketch_24087d_7.png"
+            class="d-block mx-lg-auto img-fluid"
+            alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb"
+            width="700"
+            height="200"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">About Rukiya</h1>
+          <p id="aboutText" class="lead">
+            Once upon a time, in the magical world of creation, there existed a
+            legendary creature known as Pink Pegasus! This mythical being didn’t
+            just gallop through the realms of full-stack software
+            development—they soared across the vast landscapes of art and
+            technology. A true multidisciplinary artist, they conjured wonders
+            with code, 3D modeling, physical hardware, photography, digital art
+            forms, VR/AR, and anything else they could get their hands on. With
+            a sprinkle of fun and a dash of spirit, they left a trail of
+            innovation and joy in every medium they touched. Their dazzling
+            creations seamlessly fused web applications, APIs, third-party
+            integrations, and databases with artistic expression. This
+            extraordinary creature wasn’t just talented—they were organized,
+            collaborative, and infused every project with harmony and laughter.
+            Their magical charisma enchanted media outlets and industry leaders
+            alike, sharing tales of their artistic and software engineering
+            adventures through captivating presentations and delightful
+            conversations. So, embrace your inner pegasus and let the magic of
+            creation—across every form—begin!
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
     <symbol id="github" viewBox="0 0 16 16">
