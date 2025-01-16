@@ -1,4 +1,7 @@
-"use strict";
+import { Input, Ripple, initMDB } from "mdb-ui-kit";
+
+initMDB({ Input, Ripple });
+("use strict");
 // TODO clean up this file once all buttons have been added
 
 // (() => {
