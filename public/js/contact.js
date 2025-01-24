@@ -1,11 +1,13 @@
-// import { Input, Ripple, initMDB } from "mdb-ui-kit";
+import { Input, Ripple, initMDB } from "mdb-ui-kit";
 
-// initMDB({ Input, Ripple });
+initMDB({ Input, Ripple });
 (function () {
     "use strict";
-    document.querySelector('#contactFormBtn').addEventListener('click', submitMail);
-
-    function submitMail(){
+    document
+    .querySelector('#contactFormBtn')
+    .addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
         console.log('Thanks for clicking');
         let name = document.querySelector('#name').value;
         let email = document.querySelector('#email').value;
@@ -13,5 +15,6 @@
         console.log('name' + name);
         console.log('email' + email);
         console.log('message' + message);
-    }
+    });
+
 })();
