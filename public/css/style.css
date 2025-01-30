@@ -17,3 +17,14 @@ html {
 body {
   font-family: "Shadows Into Light", serif;
 }
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: fill;
+  /* background-color: #FEA200;
+  color: #FB6AB1; */
+  background-color: rgba(254, 162, 0, 0.5); /* 80% opacity */
+  color: rgba(251, 106, 177, 1); /* 80% opacity */
+}

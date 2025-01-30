@@ -25,5 +25,5 @@ app.post('/mail', async(req, res) => {
 
 app.listen(port, () => {
   console.log(process.env.SENSITIVE_INFO);
-  console.log(`Example app listening on port ${port}`);
+  console.log(`NFT app listening on port ${port}`);
 });
