@@ -27,8 +27,8 @@ initMDB({ Input, Ripple });
     let lastName = document.querySelector("#lastName").value;
     let email = document.querySelector("#email").value;
     let message = document.querySelector("#message").value;
-    console.log("name" + firstName);
-    console.log("name" + lastName);
+    console.log("first name" + firstName);
+    console.log("last name" + lastName);
     console.log("email" + email);
     console.log("message" + message);
   }
