@@ -8,7 +8,7 @@ let dotsSketch = (p) => {
   let t = 0; // Parameter for the parametric equation
 
   p.setup = () => {
-    let canvas = p.createCanvas(p.windowWidth, p.windowHeight/1.3); // Set the height to match the container
+    let canvas = p.createCanvas(p.windowWidth, p.windowHeight / 1.3); // Set the height to match the container
     canvas.parent("dotsSketchContainer"); // Attach the canvas to the dotsSketchContainer div
     p.noStroke(); // Remove stroke from the dots
 
@@ -21,18 +21,16 @@ let dotsSketch = (p) => {
       let dot = {
         angleOffset: angleOffset,
         size: p.random(5, 70), // Random size between 5 and 70
-        speed: p.random(0.01, 2), // Random speed for each dot        
+        speed: p.random(0.01, 2), // Random speed for each dot
         x: p.width / 2 + butterflyX(angleOffset), // Initial x position
         y: p.height / 2 - butterflyY(angleOffset), // Initial y position (inverted)
       };
       dots.push(dot);
-      console.log(dot.speed);
     }
   };
 
   p.draw = () => {
     // p.background(220); // Clear the background
-
     // Update and draw each dot
     for (let i = 0; i < dots.length; i++) {
       let dot = dots[i];
@@ -53,11 +51,23 @@ let dotsSketch = (p) => {
 
   // Butterfly curve parametric equations
   function butterflyX(t) {
-    return 100 * Math.sin(t) * (Math.exp(Math.cos(t)) - 2 * Math.cos(4 * t) - Math.pow(Math.sin(t / 12), 5));
+    return (
+      100 *
+      Math.sin(t) *
+      (Math.exp(Math.cos(t)) -
+        2 * Math.cos(4 * t) -
+        Math.pow(Math.sin(t / 12), 5))
+    );
   }
 
   function butterflyY(t) {
-    return 100 * Math.cos(t) * (Math.exp(Math.cos(t)) - 2 * Math.cos(4 * t) - Math.pow(Math.sin(t / 12), 5));
+    return (
+      100 *
+      Math.cos(t) *
+      (Math.exp(Math.cos(t)) -
+        2 * Math.cos(4 * t) -
+        Math.pow(Math.sin(t / 12), 5))
+    );
   }
 };
 
