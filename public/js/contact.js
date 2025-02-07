@@ -14,7 +14,6 @@ initMDB({ Input, Ripple });
       let formValid = true;
       if (!form.checkValidity()) {
         formValid = false;
-        console.log("form not valid");
       }
       form.classList.add("was-validated");
       if (formValid) {
@@ -23,13 +22,33 @@ initMDB({ Input, Ripple });
     });
 
   function sendEmail() {
-    let firstName = document.querySelector("#firstName").value;
-    let lastName = document.querySelector("#lastName").value;
-    let email = document.querySelector("#email").value;
-    let message = document.querySelector("#message").value;
-    console.log("first name" + firstName);
-    console.log("last name" + lastName);
-    console.log("email" + email);
-    console.log("message" + message);
+    let obj = {
+      subject: "NFT Contact Form Submission",
+      text: `${document.querySelector("#firstName").value} ${
+        document.querySelector("#lastName").value
+      } sent you the following message:
+      ${document.querySelector("#message").value}.
+      Their email is: ${document.querySelector("#email").value}`,
+    };
+
+    fetch("/mail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(obj),
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        document.querySelector("#contactFormBtn").innerHTML = response.result;
+      })
+      .then(() => {
+        setTimeout(() => {
+          document.querySelector("#contactFormBtn").innerHTML = "";
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }
 })();
