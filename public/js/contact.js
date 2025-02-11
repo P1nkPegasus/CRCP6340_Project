@@ -1,48 +1,33 @@
-// import { Input, Ripple, initMDB } from "mdb-ui-kit";
-// initMDB({ Input, Ripple });
-// with this commented out; all the validation works, no tooltips ; decide which way to go
-(function () {
-  "use strict";  
-  let form = document.querySelector("#contactForm");
-//   let formValid = false;
-//   const alertTrigger = document.getElementById("contactFormBtn");
+document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
 
-//   const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
-//   const alert = (message, type) => {
-//     const wrapper = document.createElement("div");
-//     wrapper.innerHTML = [
-//       `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-//       `   <div>${message}</div>`,
-//       '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-//       "</div>",
-//     ].join("");
-//     console.log(type);
-// // TODO LOOK AT THE TIME ON THE EMAIL AND LINK IT WITH THE HISTORY HERE TO SEE WHICH CODE WAS WORKING?! WHEN REVERTED TO THE WORKING CODE THAT WAS PUSHED. IT NO LONGER WORKED. THINKING THAT IT MAY BE AND ISSUE WITH THE INTERNET.
-//     alertPlaceholder.append(wrapper);
-//   };
+  const form = document.querySelector("#contactForm");
+  const contactFormBtn = document.querySelector("#contactFormBtn");
+  const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
 
-  document
-    .querySelector("#contactFormBtn")
-    .addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
+  const showAlert = (message, type) => {
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      `   <div>${message}</div>`,
+      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+      "</div>",
+    ].join("");
+    alertPlaceholder.append(wrapper);
 
-      let formValid = true;
-      if (!form.checkValidity()) {
-        formValid = false;
-      }
-      // if (form.checkValidity()) {
-      //   formValid = true;
-      // }
-      form.classList.add("was-validated");
-      if (formValid) {
-        sendEmail();
-      }
-      // showAlert();
-    });
+    setTimeout(() => {
+      wrapper.remove();
+    }, 5000);
+  };
 
-  function sendEmail() {
-    let obj = {
+  const validateForm = () => {
+    const formValid = form.checkValidity();
+    form.classList.add("was-validated");
+    return formValid;
+  };
+
+  const sendEmail = () => {
+    const obj = {
       subject: "NFT Contact Form Submission",
       text: `${document.querySelector("#firstName").value} ${
         document.querySelector("#lastName").value
@@ -60,28 +45,29 @@
     })
       .then((res) => res.json())
       .then((response) => {
-        document.querySelector("#contactFormBtn").innerHTML = response.result;
+        contactFormBtn.innerHTML = response.result;
       })
       .then(() => {
         setTimeout(() => {
-          document.querySelector("#contactFormBtn").innerHTML = "";
+          contactFormBtn.innerHTML = "";
         }, 5000);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-  }
+  };
 
-  function showAlert() {
-    alertTrigger.addEventListener("click", () => {
-      if (formValid && alertTrigger) {
-        alert("Thanks for your message! We'll be in touch soon.", "success");
-      } else {
-        alert("Please fill out all required fields.", "danger");
-      }
-      setTimeout(() => {
-        alert.reset();
-      }, 5000);
-    });
-  }
-})();
+  contactFormBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (validateForm()) {
+      sendEmail();
+      showAlert("Thanks for your message! We'll be in touch soon.", "success");
+    } else {
+      showAlert("Please fill out the form correctly before submitting.", "danger");
+    }
+  });
+});
+
+// TODO : RESET BUTTON TEXT AND SET TO DISABLED AFTER CLICK, RENABLE AFTER VALIDATION. 
