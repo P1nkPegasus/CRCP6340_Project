@@ -44,14 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
       body: JSON.stringify(obj),
     })
       .then((res) => res.json())
-      .then((response) => {
-        contactFormBtn.innerHTML = response.result;
-      })
-      .then(() => {
-        setTimeout(() => {
-          contactFormBtn.innerHTML = "";
-        }, 5000);
-      })
       .catch((error) => {
         console.error("Error:", error);
       });
@@ -60,14 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
   contactFormBtn.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
-
+    contactFormBtn.disabled = false;
     if (validateForm()) {
       sendEmail();
       showAlert("Thanks for your message! We'll be in touch soon.", "success");
+      contactFormBtn.disabled = true;
     } else {
       showAlert("Please fill out the form correctly before submitting.", "danger");
     }
   });
 });
-
-// TODO : RESET BUTTON TEXT AND SET TO DISABLED AFTER CLICK, RENABLE AFTER VALIDATION. 
