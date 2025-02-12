@@ -58,7 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
       showAlert("Thanks for your message! We'll be in touch soon.", "success");
       contactFormBtn.disabled = true;
     } else {
-      showAlert("Please fill out the form correctly before submitting.", "danger");
+      showAlert(
+        "Please fill out the form correctly before submitting.",
+        "danger"
+      );
     }
   });
 });
