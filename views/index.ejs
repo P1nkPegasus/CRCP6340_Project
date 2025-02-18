@@ -1,219 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="icon" type="image/x-icon" href="./images/colorfulOrbIcon.png" />
-  <title>Rukiya D.'s NFT</title>
-  <meta name="author" content="Rukiya D." />
-  <meta name="description" content="Personal NFT Project" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Patrick+Hand&family=Shadows+Into+Light&display=swap"
-    rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-  <!-- MDB -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.min.css" rel="stylesheet" />
-  <!-- p5 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
-
+<%- include ('head'); %>
 <%- include ('navbar'); %>
 
-  <body>
-    <header>
-      <button type="button" id="btn-back-to-top" class="btn btn-floating btn-lg">
-        <i class="fas fa-arrow-up"></i>
-      </button>
-    </header>
-    <!-- BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"></script>
-    <!-- MDB -->
-    <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
-    <!-- MASONRY: adjusts grid layout -->
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
-      async></script>
-    <script type="module" src="./js/index.js"></script>
-    <!-- Container for p5.js sketch -->
-    <div id="dotsSketchContainer">
-      <script src="sketches/dots.js"></script>
-    </div>
-    <div id="homeSection" class="px-2 py-2 my-2 text-center">
-      <h1 class="display-5 fw-bold">Welcome!</h1>
-      <div class="col-lg-6 mx-auto">
+    <body>
+      <header>
+        <button type="button" id="btn-back-to-top" class="btn btn-floating btn-lg">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </header>
+      <!-- BOOTSTRAP -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+      <!-- MDB -->
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
+      <!-- MASONRY: adjusts grid layout -->
+      <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
+      <script type="module" src="./js/index.js"></script>
+      <!-- Container for p5.js sketch -->
+      <div id="dotsSketchContainer">
+        <script src="sketches/dots.js"></script>
       </div>
-    </div>
-    <!-- TODO update text -->
-    <!-- thematic breaks -->
-    <hr class="my-3" />
-    <div class="container mt-4 mb-4">
-      <div id="projectCards" class="row" data-masonry='{"percentPosition": true }'>
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card">
-            <img src="images/sketch_24087d_6.png" class="bd-placeholder-img card-img-top" width="100%" height="200"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#868e96" />
-            </img>
+      <div id="homeSection" class="px-2 py-2 my-2 text-center">
+        <h1 class="display-5 fw-bold">Welcome!</h1>
+        <div class="col-lg-6 mx-auto">
+        </div>
+      </div>
+      <!-- TODO update text -->
+      <!-- thematic breaks -->
+      <hr class="my-3" />
+      <div class="container mt-4 mb-4">
+        <div id="projectCards" class="row" data-masonry='{"percentPosition": true }'>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+              <img src="images/sketch_24087d_6.png" class="bd-placeholder-img card-img-top" width="100%" height="200"
+                role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96" />
+              </img>
 
-            <div class="card-body">
-              <h5 class="card-title">Card title that wraps to a new line</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
+              <div class="card-body">
+                <h5 class="card-title">Card title that wraps to a new line</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card p-3">
-            <figure class="p-3 mb-0">
-              <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0 text-muted">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card p-3">
+              <figure class="p-3 mb-0">
+                <blockquote class="blockquote">
+                  <p>A well-known quote, contained in a blockquote element.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0 text-muted">
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </figcaption>
+              </figure>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card">
-            <img src="images/sketch_24087d_5.png" class="bd-placeholder-img card-img-top" width="100%" height="200"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#868e96" />
-            </svg>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+              <img src="images/sketch_24087d_5.png" class="bd-placeholder-img card-img-top" width="100%" height="200"
+                role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96" />
+              </svg>
 
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This card has supporting text below as a natural lead-in to
-                additional content.
-              </p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  This card has supporting text below as a natural lead-in to
+                  additional content.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card text-bg-primary text-center p-3">
-            <figure class="mb-0">
-              <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0 text-white">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This card has a regular title and short paragraph of text below
-                it.
-              </p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card text-bg-primary text-center p-3">
+              <figure class="mb-0">
+                <blockquote class="blockquote">
+                  <p>A well-known quote, contained in a blockquote element.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0 text-white">
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </figcaption>
+              </figure>
             </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card">
-            <img src="images/sketch_24087d_4.png" class="bd-placeholder-img card-img-top" width="100%" height="200"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#868e96" />
-            <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
-            </svg>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  This card has a regular title and short paragraph of text below
+                  it.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card p-3 text-end">
-            <figure class="mb-0">
-              <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0 text-muted">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+              <img src="images/sketch_24087d_4.png" class="bd-placeholder-img card-img-top" width="100%" height="200"
+                role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96" />
+              <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
+              </svg>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is another card with title and supporting text below. This
-                card has some additional content to make it slightly taller
-                overall.
-              </p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card p-3 text-end">
+              <figure class="mb-0">
+                <blockquote class="blockquote">
+                  <p>A well-known quote, contained in a blockquote element.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0 text-muted">
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  This is another card with title and supporting text below. This
+                  card has some additional content to make it slightly taller
+                  overall.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- thematic breaks -->
-    <hr class="my-3" />
-    <div id="aboutSection" class="container col-xxl-8 px-4 py-5">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
-          <img src="images/sketch_24087d_7.png" class="d-block mx-lg-auto img-fluid"
-            alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb"
-            width="700" height="200" loading="lazy" />
-          <img src="images/sketch_24087d_7.png" class="d-block mx-lg-auto img-fluid"
-            alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb"
-            width="700" height="200" loading="lazy" />
-        </div>
-        <div class="col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3">About Rukiya</h1>
-          <p id="aboutText" class="lead">
-            Once upon a time, in the magical world of creation, there existed a
-            legendary creature known as Pink Pegasus! This mythical being didn’t
-            just gallop through the realms of full-stack software
-            development—they soared across the vast landscapes of art and
-            technology. A true multidisciplinary artist, they conjured wonders
-            with code, 3D modeling, physical hardware, photography, digital art
-            forms, VR/AR, and anything else they could get their hands on. With
-            a sprinkle of fun and a dash of spirit, they left a trail of
-            innovation and joy in every medium they touched. Their dazzling
-            creations seamlessly fused web applications, APIs, third-party
-            integrations, and databases with artistic expression. This
-            extraordinary creature wasn’t just talented—they were organized,
-            collaborative, and infused every project with harmony and laughter.
-            Their magical charisma enchanted media outlets and industry leaders
-            alike, sharing tales of their artistic and software engineering
-            adventures through captivating presentations and delightful
-            conversations. So, embrace your inner pegasus and let the magic of
-            creation—across every form—begin!
-          </p>
+      <!-- thematic breaks -->
+      <hr class="my-3" />
+      <div id="aboutSection" class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="images/sketch_24087d_7.png" class="d-block mx-lg-auto img-fluid"
+              alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb"
+              width="700" height="200" loading="lazy" />
+            <img src="images/sketch_24087d_7.png" class="d-block mx-lg-auto img-fluid"
+              alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb"
+              width="700" height="200" loading="lazy" />
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">About Rukiya</h1>
+            <p id="aboutText" class="lead">
+              Once upon a time, in the magical world of creation, there existed a
+              legendary creature known as Pink Pegasus! This mythical being didn’t
+              just gallop through the realms of full-stack software
+              development—they soared across the vast landscapes of art and
+              technology. A true multidisciplinary artist, they conjured wonders
+              with code, 3D modeling, physical hardware, photography, digital art
+              forms, VR/AR, and anything else they could get their hands on. With
+              a sprinkle of fun and a dash of spirit, they left a trail of
+              innovation and joy in every medium they touched. Their dazzling
+              creations seamlessly fused web applications, APIs, third-party
+              integrations, and databases with artistic expression. This
+              extraordinary creature wasn’t just talented—they were organized,
+              collaborative, and infused every project with harmony and laughter.
+              Their magical charisma enchanted media outlets and industry leaders
+              alike, sharing tales of their artistic and software engineering
+              adventures through captivating presentations and delightful
+              conversations. So, embrace your inner pegasus and let the magic of
+              creation—across every form—begin!
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <%- include ('footer'); %>
-  </body>
+      <%- include ('footer'); %>
+    </body>
 
 </html>
