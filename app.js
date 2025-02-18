@@ -4,7 +4,7 @@ import * as utils from './utils/utils.js';
 dotenv.config();
 const app = express();
 const port = 3000;
-
+let data = ['Project 1', 'Project 2', 'Project 3'];
 app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.static('public'));
@@ -30,7 +30,7 @@ app.get('/project', (req, res) => {
 })
 
 app.get('/projects', (req, res) => {
-  res.render('projects.ejs');
+  res.render('projects.ejs', {projects: data});
 })
 
 app.post('/mail', async(req, res) => {
