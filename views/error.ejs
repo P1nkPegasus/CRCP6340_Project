@@ -1,2 +1,25 @@
-<!-- TODO add in actual error page with fun details -->
-<div>ERROR: page was not found! </div>
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('head'); %>
+    <%- include ('navbar'); %>
+
+        <body>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+
+            <div class="error-container">
+                <div class="lottie-animation"></div>
+                <div class="error-content">
+                    <h1>404</h1>
+                    <p>Oopsie! The page that you are looking for does not exist.</p>
+                    <a href="/#dotsSketchContainer" class="btn btn-primary">Home</a>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+                crossorigin="anonymous"></script>
+            <script type="module" src="./js/errorPage.js"></script>
+            <%- include ('footer'); %>
+        </body>
+
+</html>

@@ -79,7 +79,10 @@ app.post("/mail", async (req, res) => {
 
 app.use((error, req, res, next) => {
   console.log(error);
-  res.render("error.ejs");
+  res.render("error", {
+    title: "Error",
+    description: "An error occurred",
+  });
 });
 
 app.listen(port, () => {

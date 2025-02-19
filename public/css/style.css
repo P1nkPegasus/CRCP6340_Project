@@ -18,6 +18,10 @@ body {
   font-family: "Shadows Into Light", serif;
 }
 
+.spacer-20 {
+  margin: 20px;
+}
+
 #btn-back-to-top {
   position: fixed;
   bottom: 80px;
@@ -27,4 +31,34 @@ body {
   color: #FB6AB1; */
   background-color: rgba(254, 162, 0, 0.5); /* 80% opacity */
   color: rgba(251, 106, 177, 1); /* 80% opacity */
+}
+
+/* ERROR PAGE */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.error-content {
+  text-align: center;
+}
+
+.error-content h1 {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.error-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.lottie-animation {
+  max-width: 400px;
+  margin-bottom: 2rem;
 }
