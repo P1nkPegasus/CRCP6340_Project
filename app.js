@@ -2,18 +2,29 @@ import express from "express";
 import dotenv from "dotenv";
 import * as utils from "./utils/utils.js";
 dotenv.config();
+import * as db from "./utils/database.js";
+import { render } from "ejs";
 const app = express();
 const port = 3000;
 let data = ["Project 1", "Project 2", "Project 3"];
+let projects = [];
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.render("index", {
-    title: "Rukiya D.'s NFT Portfolio",
-    description: "Rukiya D.'s NFT Portfolio",
-  });
+app.get("/", async (req, res, next) => {
+  await db
+    .connect()
+    .then(async () => {
+      //query the database for the project records
+      projects = await db.getAllProjects();
+      console.log(projects);
+      res.render("index", {
+        title: "Rukiya D.'s NFT Portfolio",
+        description: "Rukiya D.'s NFT Portfolio",
+      });
+    })
+    .catch(next);
 });
 
 // app.get("/about", (req, res) => {
@@ -41,7 +52,8 @@ app.get("/projects", (req, res) => {
   res.render("projects", {
     title: "Projects",
     description: "A page for multiple projects",
-    projectArray: data,
+    // projectArray: data,
+    data: projects,
   });
 });
 
