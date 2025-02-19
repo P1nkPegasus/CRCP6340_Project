@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.render("index", {
     title: "Rukiya D.'s NFT Portfolio",
-    description: "Rukiya D.s NFT Portfolio",
+    description: "Rukiya D.'s NFT Portfolio",
   });
 });
 
@@ -37,18 +37,20 @@ app.get("/newProject", (req, res) => {
   });
 });
 
-app.get("/project", (req, res) => {
-  res.render("project", {
-    title: "Project",
-    description: "A page for one project.",
-  });
-});
-
 app.get("/projects", (req, res) => {
   res.render("projects", {
     title: "Projects",
-    description: "A page for multiple projects.",
-    projects: data,
+    description: "A page for multiple projects",
+    projectArray: data,
+  });
+});
+
+app.get("/project/:id", (req, res) => {
+  let projectId = req.params.id;
+  res.render("project", {
+    title: `Project ${projectId}`,
+    description: `Details of Project ${projectId}`,
+    which: `Project ${projectId}`,
   });
 });
 
@@ -61,6 +63,11 @@ app.post("/mail", async (req, res) => {
     .catch((error) => {
       res.send({ result: "Error sending message" });
     });
+});
+
+app.use((error, req, res, next) => {
+  console.log(error);
+  res.render("error.ejs");
 });
 
 app.listen(port, () => {
