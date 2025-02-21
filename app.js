@@ -52,18 +52,26 @@ app.get("/projects", (req, res) => {
   res.render("projects", {
     title: "Projects",
     description: "A page for multiple projects",
-    // projectArray: data,
     projectArray: projects,
   });
 });
 
 app.get("/project/:id", (req, res) => {
-  let projectId = req.params.id;
-  res.render("project", {
-    title: `Project ${projectId}`,
-    description: `Details of Project ${projectId}`,
-    which: `Project ${projectId}`,
-  });
+  const projectId = req.params.id;
+  const project = projects.find(p => p.id === parseInt(projectId));
+  if (project) {
+    res.render("project", {
+      title: `Project ${projectId}`,
+      description: `Details of Project ${projectId}`,
+      which: `Project ${projectId}`,
+      project: project,
+    });
+  } else {
+    res.render("error", {
+      title: "Error",
+      description: "An error occurred",
+    });
+  }
 });
 
 app.post("/mail", async (req, res) => {

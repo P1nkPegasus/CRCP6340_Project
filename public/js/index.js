@@ -1,17 +1,3 @@
-// TODO clean up this file once all buttons have been added
-// import { Input, Ripple, initMDB } from "mdb-ui-kit";
-
-// initMDB({ Input, Ripple });
-// ("use strict");
-
-// (() => {
-//     document.querySelector('#testButton').addEventListener('click', handleClick);
-
-//     function handleClick(){
-//         console.log('Thanks for clicking');
-//     }
-// })();
-
 // Courtesy of MDB Documentation
 // https://mdbootstrap.com/snippets/standard/mdbootstrap/2964350#js-tab-view
 //Get the button
@@ -23,7 +9,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
