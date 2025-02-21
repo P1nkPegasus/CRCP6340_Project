@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include ('head'); %>
-<%- include ('navbar'); %>
+  <%- include ('navbar'); %>
 
     <body>
       <div class="container m-3">
         <h1>Projects</h1>
         <p>Here are some of my projects. Click on the links to see the code and a demo.</p>
-        <div>Projects</div>
-        <% projectArray.forEach((item, index) => { %>
+        <% projectArray.forEach((item, index)=> { %>
           <div>
-            <a href='/project/<%= index + 1 %>'>
-              <%= item %>
-            </a>
+
+            <%- include ('projectCard', 
+            {
+              id: item.id,
+              image: item.img_url,
+              name: item.project_name
+              }); %>
           </div>
           <% }); %>
       </div>

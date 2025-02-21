@@ -53,7 +53,7 @@ app.get("/projects", (req, res) => {
     title: "Projects",
     description: "A page for multiple projects",
     // projectArray: data,
-    data: projects,
+    projectArray: projects,
   });
 });
 
@@ -86,6 +86,5 @@ app.use((error, req, res, next) => {
 });
 
 app.listen(port, () => {
-  console.log(process.env.SENSITIVE_INFO);
   console.log(`NFT app listening on port ${port}`);
 });
