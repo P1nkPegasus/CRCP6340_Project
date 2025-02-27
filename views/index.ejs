@@ -34,7 +34,8 @@
           <% const randomIndex = Math.floor(Math.random() * projectArray.length); %>
           <% const randomProject = projectArray[randomIndex]; %>
           <div>
-            <%- include('projectCard', { id: randomProject.id, image: randomProject.img_url, name: randomProject.project_name }); %>
+            <%- include('projectCard', { id: randomProject.id, image: randomProject.img_url, name: randomProject.project_name,
+            projectDescription: randomProject.project_description }); %>
           </div>
         <% } else { %>
           <p>No projects available.</p>

@@ -1,15 +1,34 @@
 <div class="card m-2 h-100 fadein" style="width: 18rem;">
-    <img src="<%= image %>"card-img-top" alt="An image of the <%= name %> project">
+    <img src="<%= image %>" card-img-top" alt="An image of the <%= name %> project">
     <div class="card-body">
         <h5 class="card-title">
             <%= name %>
         </h5>
         <p class="card-text">
-            <%= description %>
+            <%= projectDescription %>
         </p>
+        <ul class="list-group list-group-flush">
+            <% if (typeof quantity !== 'undefined') { %>
+              <li class="list-group-item">Quantity: <%= quantity %></li>
+            <% } %>
+            <% if (typeof price !== 'undefined') { %>
+              <li class="list-group-item">Price (ETH): <%= price %></li>
+            <% } %>
+            <% if (typeof open !== 'undefined') { %>
+              <li class="list-group-item">Open Date (GMT): <%= open %></li>
+            <% } %>
+            <% if (typeof royalty !== 'undefined') { %>
+              <li class="list-group-item">Royalty Percent: <%= royalty %></li>
+            <% } %>
+            <% if (typeof active !== 'undefined') { %>
+              <li class="list-group-item">Active: <%= active ? 'Yes' : 'No' %></li>
+            <% } %>
+          </ul>
     </div>
 
     <div class="card-footer">
-        <a href="/project/<%= id %>" class="btn btn-primary"> <%= name %>'s profile</a>
+        <a href="/project/<%= id %>" class="btn btn-primary">
+            <%= name %>'s profile
+        </a>
     </div>
 </div>

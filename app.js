@@ -75,25 +75,25 @@ app.get("/project/:id", (req, res) => {
   }
 });
 
-app.post("/mail", async (req, res) => {
-  await utils
-    .sendMessage(req.body.subject, req.body.text)
-    .then(() => {
-      res.send({ result: "Success" });
-    })
-    .catch((error) => {
-      res.send({ result: "Error sending message" });
-    });
-});
-
-app.use((error, req, res, next) => {
-  console.log(error);
-  res.render("error", {
-    title: "Error",
-    description: "An error occurred",
+  app.post("/mail", async (req, res) => {
+    await utils
+      .sendMessage(req.body.subject, req.body.text)
+      .then(() => {
+        res.send({ result: "Success" });
+      })
+      .catch((error) => {
+        res.send({ result: "Error sending message" });
+      });
   });
-});
 
-app.listen(port, () => {
-  console.log(`NFT app listening on port ${port}`);
-});
+  app.use((error, req, res, next) => {
+    console.log(error);
+    res.render("error", {
+      title: "Error",
+      description: "An error occurred",
+    });
+  });
+
+  app.listen(port, () => {
+    console.log(`NFT app listening on port ${port}`);
+  });

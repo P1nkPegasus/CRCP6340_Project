@@ -18,7 +18,6 @@
       .request({ method: "eth_requestAccounts" })
       .then((data) => {
         userAddress = data[0];
-        console.log(userAddress);
 
         let walletString =
           userAddress.substring(0, 5) + "..." + userAddress.substring(38, 42);
