@@ -22,6 +22,7 @@ app.get("/", async (req, res, next) => {
       res.render("index", {
         title: "Rukiya D.'s NFT Portfolio",
         description: "Rukiya D.'s NFT Portfolio",
+        projectArray: projects
       });
     })
     .catch(next);
