@@ -9,7 +9,7 @@
           <h1>Projects</h1>
           <p>Here are some of my projects. Click on the links to see the code and a demo.</p>
           <% projectArray.forEach((item, index)=> { %>
-            <div>
+            <div  id="projectCards" class="row" data-masonry='{"percentPosition": true }'>
 
               <%- include ('projectCard', { 
                 id: item.id,
