@@ -27,8 +27,16 @@
     </div>
 
     <div class="card-footer">
-        <a href="/project/<%= id %>" class="btn btn-primary">
+      <% if (typeof context !== 'undefined') { %>
+
+        <% if (context === 'index' || context === 'projects') { %>
+          <a href="/project/<%= id %>" class="btn btn-primary">
             <%= name %>'s profile
-        </a>
+          </a> 
+        <% } else if (context === 'project') { %>
+          <button class="btn btn-primary">Mint Me!</button>
+        <% } %>
+      <% } %>
+    
     </div>
 </div>

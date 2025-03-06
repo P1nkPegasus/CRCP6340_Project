@@ -36,8 +36,11 @@
           <div>
             <%- include('projectCard', { 
               id: randomProject.id, 
-              image: randomProject.img_url, name: randomProject.project_name,
-            projectDescription: randomProject.project_description }); %>
+              image: randomProject.img_url,
+              name: randomProject.project_name,
+              projectDescription: randomProject.project_description,
+              context: 'index',
+             }); %>
           </div>
         <% } else { %>
           <p>No projects available.</p>

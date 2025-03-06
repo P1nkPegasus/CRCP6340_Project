@@ -3,8 +3,11 @@ import dotenv from "dotenv";
 import * as utils from "./utils/utils.js";
 dotenv.config();
 import * as db from "./utils/database.js";
-import { render } from "ejs";
+import cors from "cors";
+
 const app = express();
+//more security can get added here
+app.use(cors());
 const port = 3000;
 let data = ["Project 1", "Project 2", "Project 3"];
 let projects = [];
