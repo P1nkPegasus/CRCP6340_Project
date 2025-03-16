@@ -12,10 +12,6 @@
       <!-- MDB -->
       <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
-      <!-- MASONRY: adjusts grid layout -->
-      <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
-        async></script>
       <script type="module" src="./js/index.js"></script>
       <!-- Container for p5.js sketch -->
       <div id="dotsSketchContainer">
@@ -33,7 +29,7 @@
         <% if (projectArray.length > 0) { %>
           <% const randomIndex = Math.floor(Math.random() * projectArray.length); %>
           <% const randomProject = projectArray[randomIndex]; %>
-          <div>
+          <div style="width: 18rem;">
             <%- include('projectCard', { 
               id: randomProject.id, 
               image: randomProject.img_url,
@@ -59,7 +55,7 @@
               width="700" height="200" loading="lazy" />
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">About Rukiya</h1>
+            <h2 class="display-5 fw-bold lh-1 mb-3">About Rukiya</h2>
             <p id="aboutText" class="lead">
               Once upon a time, in the magical world of creation, there existed a
               legendary creature known as Pink Pegasus! This mythical being didn’t
@@ -80,7 +76,7 @@
               conversations. So, embrace your inner pegasus and let the magic of
               creation—across every form—begin!
             </p>
-            <a href="contact" class="btn btn-primary"> Contact me</a>
+            <a href="contact" class="btn btn-primary" aria-label="contact me"> Contact me</a>
           </div>
         </div>
       </div>
