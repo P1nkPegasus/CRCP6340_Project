@@ -29,7 +29,7 @@
         <% if (projectArray.length > 0) { %>
           <% const randomIndex = Math.floor(Math.random() * projectArray.length); %>
           <% const randomProject = projectArray[randomIndex]; %>
-          <div style="width: 18rem;">
+          <div class="container d-flex align-items-center justify-content-center" style="width: 18rem;">
             <%- include('projectCard', { 
               id: randomProject.id, 
               image: randomProject.img_url,

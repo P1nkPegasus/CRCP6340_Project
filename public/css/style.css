@@ -33,6 +33,14 @@ body {
   color: rgba(251, 106, 177, 1); /* 80% opacity */
 }
 
+.display-inline {
+  display: inline-block;
+}
+
+.container{
+  height: 100%;
+}
+
 /* ERROR PAGE */
 .error-container {
   display: flex;
