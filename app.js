@@ -16,27 +16,39 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.get("/", async (req, res, next) => {
-  await db
-    .connect()
-    .then(async () => {
-      //query the database for the project records
-      projects = await db.getAllProjects();
-      console.log(projects);
-      res.render("index", {
-        title: "Rukiya D.'s NFT Portfolio",
-        description: "Rukiya D.'s NFT Portfolio",
-        projectArray: projects
-      });
-    })
-    .catch(next);
+  // await db
+  //   .connect()
+  //   .then(async () => {
+  //     //query the database for the project records
+  //     projects = await db.getAllProjects();
+  //     console.log(projects);
+  //     res.render("index", {
+  //       title: "Rukiya D.'s NFT Portfolio",
+  //       description: "Rukiya D.'s NFT Portfolio",
+  //       projectArray: projects
+  //     });
+  //   })
+  //   .catch(next);
+  try {
+    await db.connect();
+    projects = await db.getAllProjects();
+    console.log("Projects fetched:", projects);
+    
+    res.render("index", {
+      title: "Rukiya D.'s NFT Portfolio",
+      description: "Rukiya D.'s NFT Portfolio",
+      projectArray: projects || [] // Fallback to empty array
+    });
+  } catch (error) {
+    console.error("Database error:", error);
+    // Render even if DB fails (with empty projects)
+    res.render("index", {
+      title: "Rukiya D.'s NFT Portfolio",
+      description: "Rukiya D.'s NFT Portfolio",
+      projectArray: []
+    });
+  }
 });
-
-// app.get("/about", (req, res) => {
-//   res.render("about", {
-//     title: "About Rukiya D.",
-//     description: "A page for the artist's biography.",
-//   });
-// });
 
 app.get("/contact", (req, res) => {
   res.render("contact", {
