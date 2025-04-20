@@ -33,8 +33,6 @@ export async function connect() {
       },
     })
     .promise();
-    console.log(process.env); // Check what env vars are actually available
-    console.log(cString); // Verify the connection string is correct
 }
 
 export async function getAllProjects() {
