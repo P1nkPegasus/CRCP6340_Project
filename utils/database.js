@@ -27,9 +27,7 @@ export async function connect() {
       database: process.env.MYSQL_DATABASE,
       port: process.env.MYSQL_PORT,
       ssl: {
-        ca: fs.readFileSync(
-          "/Users/rookmac/Documents/School/SMU/CRCP_6340_Creative_Coding_App_Dev/CRCP6340_Project/ca-certificate.crt"
-        ), 
+        ca: fs.readFileSync(process.env.MYSQL_CA_CERT_PATH), 
         rejectUnauthorized: true, // Enforces SSL certificate validation
       },
     })
