@@ -19,13 +19,12 @@
       </div>
       <div id="homeSection" class="px-2 py-2 my-2 text-center">
         <h1 class="display-5 fw-bold">Welcome!</h1>
-        <div class="col-lg-6 mx-auto">
-        </div>
+        <div class="col-lg-6 mx-auto"></div>
       </div>
       <!-- TODO update text -->
       <!-- thematic breaks -->
       <hr class="my-3" />
-      <div class="container mt-4 mb-4">
+      <div id="featuredProjects" class="container mt-4 mb-4">
         <% if (projectArray.length > 0) { %>
           <% const randomIndex = Math.floor(Math.random() * projectArray.length); %>
           <% const randomProject = projectArray[randomIndex]; %>
@@ -38,6 +37,8 @@
               context: 'index',
              }); %>
           </div>
+          <div id="contracts" class="d-none"><%= contracts %></div>
+          <div id="mints" class="d-none"><%= mints %></div>
         <% } else { %>
           <p>No projects available.</p>
         <% } %>

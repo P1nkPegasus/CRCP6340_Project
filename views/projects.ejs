@@ -5,20 +5,19 @@
 
     <body>
       <%- include ('header'); %>
-      
-        <div class=" m-3 text-center" >
-          <div id="textSection" class="px-2 py-2 my-2">
-            <h1>Projects</h1>
-            <p>Here are some of my projects. Click on the links to see the code and a demo.</p>
-          </div>
-          <div >
-
-            <% projectArray.forEach((item, index)=> { %>
-              <div class="row" data-masonry='{"percentPosition": true }'>
-
-                <div m-2 fadein col-sm-6 col-lg-4 mb-4>
-
-                  <%- include ('projectCard', { 
+        <main class="justify-content-center">
+          <div class="spacer"></div>
+          <div id="contracts" class="d-none"><%= contracts %></div>
+          <div id="mints" class="d-none"><%= mints %></div>
+          <div id="projects" class="d-none"><%= JSON.stringify(projectArray) %></div>
+          <h1 class="display-5 justify-content-center text-center">Projects</h1>
+          <div class="mb-5">
+            <div class="row justify-content-center">
+              <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-4 g-3 text-center justify-content-center">
+                <% projectArray.forEach((item, index) => {%>
+                <div id="project-holder" class="col-10">
+                  <% let link ="/project/"+item.id %>
+                  <%- include('projectCard', {
                     id: item.id,
                     image: item.img_url, 
                     name: item.project_name,
@@ -26,12 +25,11 @@
                     context: 'projects'
                   }); %>
                 </div>
-                
+                <% }); %>
               </div>
-              <% }); %>
             </div>
-        </div>
-
+          </div>
+        </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
           crossorigin="anonymous"></script>
