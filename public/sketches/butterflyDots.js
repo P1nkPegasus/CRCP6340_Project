@@ -9,7 +9,7 @@ let dotsSketch = (p) => {
 
   p.setup = () => {
     let canvas = p.createCanvas(p.windowWidth, p.windowHeight / 1.3); // Set the height to match the container
-    canvas.parent("dotsSketchContainer"); // Attach the canvas to the dotsSketchContainer div
+    canvas.parent("butterflyDotsSketchContainer"); // Attach the canvas to the butterflyDotsSketchContainer div
     p.noStroke(); // Remove stroke from the dots
 
     // Generate a random number of dots between 50 and 150

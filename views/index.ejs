@@ -1,87 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include ('head'); %>
-<%- include ('navbar'); %>
+  <%- include ('navbar'); %>
 
     <body>
       <%- include ('header'); %>
-      <!-- BOOTSTRAP -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-      <!-- MDB -->
-      <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
-      <script type="module" src="./js/index.js"></script>
-      <!-- Container for p5.js sketch -->
-      <div id="dotsSketchContainer">
-        <script src="sketches/dots.js"></script>
-      </div>
-      <div id="homeSection" class="px-2 py-2 my-2 text-center">
-        <h1 class="display-5 fw-bold">Welcome!</h1>
-        <div class="col-lg-6 mx-auto"></div>
-      </div>
-      <!-- TODO update text -->
-      <!-- thematic breaks -->
-      <hr class="my-3" />
-      <div id="featuredProjects" class="container mt-4 mb-4">
-        <% if (projectArray.length > 0) { %>
-          <% const randomIndex = Math.floor(Math.random() * projectArray.length); %>
-          <% const randomProject = projectArray[randomIndex]; %>
-          <div class="container d-flex align-items-center justify-content-center" style="width: 18rem;">
-            <%- include('projectCard', { 
-              id: randomProject.id, 
-              image: randomProject.img_url,
-              name: randomProject.project_name,
-              projectDescription: randomProject.project_description,
-              context: 'index',
-             }); %>
-          </div>
-          <div id="contracts" class="d-none"><%= contracts %></div>
-          <div id="mints" class="d-none"><%= mints %></div>
-        <% } else { %>
-          <p>No projects available.</p>
-        <% } %>
-      </div>
-      <!-- thematic breaks -->
-      <hr class="my-3" />
-      <div id="aboutSection" class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
-            <img src="images/sketch_24087d_7.png" class="d-block mx-lg-auto img-fluid"
+        <!-- BOOTSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+          crossorigin="anonymous"></script>
+        <!-- MDB -->
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
+        <script type="module" src="./js/index.js"></script>
+        <!-- Container for p5.js sketch -->
+        <div id="butterflyDotsSketchContainer">
+          <script src="sketches/butterflyDots.js"></script>
+        </div>
+        <div id="homeSection" class="px-2 py-2 my-2 text-center">
+          <h1 class="display-5 fw-bold">Welcome!</h1>
+          <div class="col-lg-6 mx-auto"></div>
+        </div>
+        <!-- TODO update text -->
+        <!-- thematic breaks -->
+        <hr class="my-3" />
+        <div id="featuredProjects" class="container mt-4 mb-4">
+          <% if (projectArray.length> 0) { %>
+            <% const randomIndex=Math.floor(Math.random() * projectArray.length); %>
+              <% const randomProject=projectArray[randomIndex]; %>
+                <div class="container d-flex align-items-center justify-content-center" style="width: 18rem;">
+                  <%- include('projectCard', { id: randomProject.id, image: randomProject.img_url, name:
+                    randomProject.project_name, projectDescription: randomProject.project_description, context: 'index'
+                    , }); %>
+                </div>
+                <div id="contracts" class="d-none">
+                  <%= contracts %>
+                </div>
+                <div id="mints" class="d-none">
+                  <%= mints %>
+                </div>
+                <% } else { %>
+                  <p>No projects available.</p>
+                  <% } %>
+        </div>
+        <!-- thematic breaks -->
+        <hr class="my-3" />
+        <div id="aboutSection" class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="images/sketch_24087d_7.png" class="d-block mx-lg-auto img-fluid"
+                alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb"
+                width="700" height="200" loading="lazy" />
+              <!-- <img src="images/sketch_24087d_7.png" class="d-block mx-lg-auto img-fluid"
               alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb"
-              width="700" height="200" loading="lazy" />
-            <img src="images/sketch_24087d_7.png" class="d-block mx-lg-auto img-fluid"
-              alt="image of the artist's work, a lime green background with multiple orbs surrounding a enourmous orb"
-              width="700" height="200" loading="lazy" />
-          </div>
-          <div class="col-lg-6">
-            <h2 class="display-5 fw-bold lh-1 mb-3">About Rukiya</h2>
-            <p id="aboutText" class="lead">
-              Once upon a time, in the magical world of creation, there existed a
-              legendary creature known as Pink Pegasus! This mythical being didn’t
-              just gallop through the realms of full-stack software
-              development—they soared across the vast landscapes of art and
-              technology. A true multidisciplinary artist, they conjured wonders
-              with code, 3D modeling, physical hardware, photography, digital art
-              forms, VR/AR, and anything else they could get their hands on. With
-              a sprinkle of fun and a dash of spirit, they left a trail of
-              innovation and joy in every medium they touched. Their dazzling
-              creations seamlessly fused web applications, APIs, third-party
-              integrations, and databases with artistic expression. This
-              extraordinary creature wasn’t just talented—they were organized,
-              collaborative, and infused every project with harmony and laughter.
-              Their magical charisma enchanted media outlets and industry leaders
-              alike, sharing tales of their artistic and software engineering
-              adventures through captivating presentations and delightful
-              conversations. So, embrace your inner pegasus and let the magic of
-              creation—across every form—begin!
-            </p>
-            <a href="contact" class="btn btn-primary" aria-label="contact me"> Contact me</a>
+              width="700" height="200" loading="lazy" /> -->
+            </div>
+            <div class="col-lg-6">
+              <h2 class="display-5 fw-bold lh-1 mb-3">About Rukiya</h2>
+              <p id="aboutText" class="lead">
+                Once upon a time, in the magical world of creation, there existed a
+                legendary creature known as Pink Pegasus! This mythical being didn’t
+                just gallop through the realms of full-stack software
+                development—they soared across the vast landscapes of art and
+                technology. A true multidisciplinary artist, they conjured wonders
+                with code, 3D modeling, physical hardware, photography, digital art
+                forms, VR/AR, and anything else they could get their hands on. With
+                a sprinkle of fun and a dash of spirit, they left a trail of
+                innovation and joy in every medium they touched. Their dazzling
+                creations seamlessly fused web applications, APIs, third-party
+                integrations, and databases with artistic expression. This
+                extraordinary creature wasn’t just talented—they were organized,
+                collaborative, and infused every project with harmony and laughter.
+                Their magical charisma enchanted media outlets and industry leaders
+                alike, sharing tales of their artistic and software engineering
+                adventures through captivating presentations and delightful
+                conversations. So, embrace your inner pegasus and let the magic of
+                creation—across every form—begin!
+              </p>
+              <a href="contact" class="btn btn-primary" aria-label="contact me"> Contact me</a>
+            </div>
           </div>
         </div>
-      </div>
-      <%- include ('footer'); %>
+        <%- include ('footer'); %>
     </body>
 
 </html>
